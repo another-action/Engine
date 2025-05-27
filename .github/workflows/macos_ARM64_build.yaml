@@ -36,7 +36,7 @@ jobs:
         pwd
         cd ORE-SWIG
         python -m pip install setuptools
-        cp ORE-SWIG/wheels/oreanalytics-config.macos ORE-SWIG/oreanalytics-config
+        cp Wheels/oreanalytics-config.macos oreanalytics-config
         cd ORE-SWIG/OREAnalytics-SWIG
         ls -al
         cd SWIG
