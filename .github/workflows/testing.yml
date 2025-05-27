@@ -1,0 +1,34 @@
+name: C/C++ MacOS ARM64
+
+on:
+  push:
+    tags:
+       - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-13
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+    #    token: ${{ secrets.ORG_ACTIONS_ACCESS }}  
+    #- name: get QuantLib
+    #  run: |
+    #    git submodule update --init --recursive
+    - name: Wrap ORE-SWIG for Python Wheels
+      run: |
+        pwd
+        cd ORE-SWIG
+        python -m pip install setuptools
+        cp Wheels/oreanalytics-config.macos oreanalytics-config
+        cd OREAnalytics-SWIG
+        ls -al
+        cd SWIG
+        ls -al
+        chmod +x oreanalytics.i
+        cd ..
+        cd ..
+        ls -al
+        pwd
