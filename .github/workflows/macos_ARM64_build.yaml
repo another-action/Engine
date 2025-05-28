@@ -17,6 +17,9 @@ jobs:
     #- name: get QuantLib
     #  run: |
     #    git submodule update --init --recursive
+    - name: Install SWIG
+      run: |
+        brew install swig
     - name: Install Boost
       run: |
         curl -O -L https://archives.boost.io/release/1.84.0/source/boost_1_84_0.tar.gz
