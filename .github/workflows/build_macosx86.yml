@@ -50,7 +50,7 @@ jobs:
     - name: Build Wheels
       uses: pypa/cibuildwheel@v2.22.0
       env:
-        CIBW_SKIP: cp36-*
+        CIBW_SKIP: cp36-* pp*
         CIBW_ARCHS_MACOS: x86_64
         MACOSX_DEPLOYMENT_TARGET: "13.7"
         CXXFLAGS: -std=c++17 -g0 -O3 -mmacosx-version-min=13
