@@ -34,13 +34,17 @@ jobs:
     - name: Wrap ORE-SWIG
       run: |
         pwd
-        python -m pip install setuptools
-        cp ORE-SWIG/wheels/oreanalytics-config.macos ORE-SWIG/oreanalytics-config
+        sudo python -m pip install setuptools
+        cp ORE-SWIG/Wheels/oreanalytics-config.macos ORE-SWIG/oreanalytics-config
         chmod +x oreanalytics-config
-        cd ORE-SWIG/OREAnalytics-SWIG/SWIG
-        chmod +x oreanalytics.i
+        cd ORE-SWIG/OREAnalytics-SWIG
+        ls -al
+        cd SWIG
+        ls -al
+        sudo chmod +x oreanalytics.i
         cd ..
         cd ..
+        ls -al
         pwd
         python setup.py wrap
     - name: Build Wheels
