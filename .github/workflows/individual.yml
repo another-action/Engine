@@ -1,4 +1,4 @@
-name: Individual Linux 3.10
+name: Individual
 
 on:
   workflow_dispatch:
