@@ -54,8 +54,8 @@ jobs:
     - name: Build Wheels
       uses: pypa/cibuildwheel@v2.22.0
       env:
-        CIBW_SKIP: cp36-*
-        #CIBW_BUILD: cp311-macosx_arm64
+        #CIBW_SKIP: cp36-*
+        CIBW_BUILD: cp310-macosx_arm64
         CIBW_ARCHS_MACOS: arm64
         MACOSX_DEPLOYMENT_TARGET: "13.7"
         CIBW_ENVIRONMENT: MACOSX_DEPLOYMENT_TARGET=13.7
